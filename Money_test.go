@@ -13,3 +13,9 @@ func TestMultiplication(t *testing.T) {
         t.Errorf("times(3) is not 15")
     }
 }
+
+func TestEquality(t *testing.T) {
+    if NewDollar(5).equals(NewDollar(5)) {
+        t.Errorf("two of instances are not same")
+    }
+}
