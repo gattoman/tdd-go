@@ -24,3 +24,14 @@ func TestEquality(t *testing.T) {
 		t.Errorf("two of instances are not same")
 	}
 }
+
+func TestFrancMultiplication(t *testing.T) {
+	five := NewFlanc(5)
+
+	if !reflect.DeepEqual(NewFlanc(10), five.times(2)) {
+		t.Errorf("times(2) is not 10")
+	}
+	if !reflect.DeepEqual(NewFlanc(15), five.times(3)) {
+		t.Errorf("times(3) is not 15")
+	}
+}
